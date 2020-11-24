@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="script.js"></script>
+</head>
+<style>
+    .image{
+        height:200px;
+        width:200px;
+    }
+    .image1{
+        padding-right: 5px;
+    }
+    .dropcontainer{
+       
+        border: 3px solid black;
+        margin-top:15px;
+        height: 400px;
+        width: 200px;
+    }
+    .forcedpadding{
+        margin-top:-350px;
+        border: 3px solid black;
+    }
+</style>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div id="leftColumn" class="col-sm-2" style="background-color:lavender;">
+                <div id="imagenew" class="list-item" draggable="true" ondragstart="drag(event)"><img id='waste1.jpeg' class="image" src="./images/waste1.jpeg"></div>
+                <div id="imagenew" class="list-item" draggable="true" ondragstart="drag(event)"><img id='waste2.jpeg' class="image" src="./images/waste2.jpeg"></div>
+                <div id="imagenew" class="list-item" draggable="true" ondragstart="drag(event)"><img id='waste3.jpeg' class="image" src="./images/waste3.jpeg"></div>
+                <div id="imagenew" class="list-item" draggable="true" ondragstart="drag(event)"><img id='waste4.jpeg' class="image" src="./images/waste4.jpeg"></div>
+            
+            </div>
+
+
+            <div id="gap" class="col-sm-1" style="background-color:#ffffff;"></div>
+
+
+
+
+            <div  class="col-sm-3 dropcontainer" ondrop="drop1(event)" ondragover="allowDrop(event)"><img id="imgDrop1" class="image"></div>
+            <div  class="col-sm-3 dropcontainer" ondrop="drop2(event)" ondragover="allowDrop(event)"><img id="imgDrop2" class="image"></div>           
+            
+            
+
+
+            <div id="gap" class="col-sm-1" style="background-color:#ffffff;"></div>
+
+
+            <div id="rightColumn" class="col-sm-2" style="background-color:lavender;">
+                <div id="imagenew" class="list-item" draggable="true" ondragstart="drag(event)"><img id='tool1.jpeg' class="image" src="./images/tool1.jpeg"></div>
+                <div id="imagenew" class="list-item" draggable="true" ondragstart="drag(event)"><img id='tool2.jpeg' class="image" src="./images/tool2.jpeg"></div>
+                <div id="imagenew" class="list-item" draggable="true" ondragstart="drag(event)"><img id='tool3.jpeg' class="image" src="./images/tool3.jpeg"></div>
+                <div id="imagenew" class="list-item" draggable="true" ondragstart="drag(event)"><img id='tool4.jpeg' class="image" src="./images/tool4.jpeg"></div>
+            
+            </div>
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-3"></div>
+        <div class="col-sm-6 forcedpadding" style="background-color:whitesmoke" >
+            <img src="./images/white.jpeg" id="social" onclick = "change()" class="col-sm-2">
+            <img src="./images/white.jpeg" id="social1" onclick = "change1()" class="col-sm-2">
+            <img src="./images/white.jpeg" id="social2" onclick = "change2()" class="col-sm-2">
+        </div>
+        
+        <div class="col-sm-3"></div>
+        
+    </div>
+</body>
+<script>
+    function change() {
+  var newimage = document.getElementById('social');
+  newimage.src = "./images/product2.jpeg";
+}
+function change1() {
+  var newimage = document.getElementById('social1');
+  newimage.src = "./images/product3.jpeg";
+}
+function change2() {
+  var newimage = document.getElementById('social2');
+  newimage.src = "./images/product4.jpeg";
+}
+</script>
+</html>
